@@ -1,0 +1,91 @@
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+
+  .modal-box {
+    background-color: var(--modal-bg);
+    color: var(--modal-text);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    font-family: inherit;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+  }
+  
+  .modal-box h2 {
+    margin-top: 0;
+    color: var(--heading-color);
+  }
+  
+  .modal-box label {
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  .modal-box input,
+  .modal-box textarea,
+  .modal-box select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .modal-actions button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-actions button:hover {
+    opacity: 0.9;
+  }
+  
+  .modal-actions .cancel {
+    background: #ccc;
+    color: black;
+  }
+
+  .light {
+    --modal-bg: #ffffff;
+    --modal-text: #333333;
+    --input-bg: #f9f9f9;
+    --input-text: #000000;
+    --input-border: #ccc;
+    --heading-color: #2d4a78;
+  }
+  
+  .dark {
+    --modal-bg: #1f1f2e;
+    --modal-text: #e0e0e0;
+    --input-bg: #2c2c3e;
+    --input-text: #ffffff;
+    --input-border: #444;
+    --heading-color: #6ca0ff;
+  }
+  

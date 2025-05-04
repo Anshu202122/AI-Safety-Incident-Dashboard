@@ -1,0 +1,124 @@
+.incident-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; 
+}
+
+.header-right button {
+    background-color: #2d4a78;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    cursor: pointer;
+    width: 90px;
+    width: auto;
+    white-space: nowrap;
+}
+
+.header-right button:hover {
+    background-color: #1e2e4e;
+}
+.title {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.badge {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* .badge.high {
+    background-color: #ffe0e0;
+    color: #b20000;
+} */
+.badge.high {
+    background-color: #8f0404;
+    color: #ffe0e0;
+}
+
+.badge.medium {
+    background-color:#b57a04 ;
+    color: #fff3cd;
+}
+
+.badge.low {
+    background-color:#155724 ;
+    color: #d4edda;
+}
+
+.description {
+    margin-top: 1rem;
+    color: rgb(60, 60, 60);
+    font-size: 1.1rem;
+}
+
+.description-box {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+
+.dark .description-box {
+    background-color: #08172da9;
+    border-color: #ffffff4a;
+    color: #333;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dark .description {
+    color: #ddd;
+}
+
+
+
+.header-right button{
+    background-color: #253e66ef;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.header-right button:hover{
+    background-color: #000d28;
+}

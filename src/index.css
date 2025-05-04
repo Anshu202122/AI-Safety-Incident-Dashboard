@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+
+:root {
+  --bg-light: #f9fafb;
+  --bg-dark: #1f2937;
+  --text-light: #111827;
+  --text-dark: #f9fafb;
+  --card-light: #dcdddf;
+  --card-dark: #374151;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2rem;
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #01132d;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.incident-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.incident-item {
+  background: var(--card-light);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.incident-item:hover {
+  transform: translateY(-5px);
+}
+
+body.dark .incident-item {
+  background: var(--card-dark);
+}
+
+body.dark .incident-item .description {
+  color: #c5c6c7;
+  font-size: 1.1rem;
+}
+
+body .incident-item {
+  background: var(--card-light);
+}
+
+body.dark .badge.low {
+  background: #0e3c2c;
+  color: #6ee7b7;
+}
+
+body.dark .badge.medium {
+  background: #5a3d00;
+  color: #fde68a;
+}
+
+body.dark .badge.high {
+  background: #470000;
+  color: #fca5a5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.description {
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filters,
+.sort-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filters button,
+.sort-controls select,
+.report-form button {
+  background-color: #253e66ef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.sort-controls select:hover,
+.report-form button:hover {
+  background-color: #000d28;
+}
+
+.filters .active {
+  background-color: #000d28;
+}
+
+.badge {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.badge.low {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.report-form {
+  margin-top: 2rem;
+  background: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .report-form {
+  background: var(--card-dark);
+}
+
+.report-form input,
+.report-form textarea,
+.report-form select {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border: 1px solid #585b60;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: transparent;
+  color: inherit;
+}
+
+.report-form input:focus,
+.report-form textarea:focus,
+.report-form select:focus {
+  border-color: #585b60;
+  outline: none;
+}
+
+button {
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+body:not(.dark) .btn,
+body:not(.dark) .filters button,
+body:not(.dark) .sort-controls select,
+body:not(.dark) .header-right button {
+    background-color: #ffffff;
+    color: #000000;
+    border: #07213781 solid 1px;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+body:not(.dark) .btn:hover,
+body:not(.dark) .filters button:hover,
+body:not(.dark) .sort-controls select:hover,
+body:not(.dark) .header-right button:hover {
+    background-color: #72aeeead;
+}
+
+.incident-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.incident-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.select-dark {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.select-dark option {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.light {
+  background-color: #0b3270ef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn.light:hover {
+  background-color: #274370ef;
+  color: black;
+}
+
+.btn.dark {
+  background-color: rgb(37, 54, 92);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn.dark:hover {
+  background-color: #274370ef;
+  color: white;
+}
