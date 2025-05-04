@@ -12,6 +12,7 @@ The app includes theme toggle (Light/Dark Mode), smooth animations, user-friendl
 * Sort incidents by Newest or Oldest date.
 * Light/Dark Mode toggle.
 * Add new incidents through a report form.
+* Edit or delete existing incidents directly from the dashboard.
 * Smooth button animations and polished UI.
 * Responsive design and clean alignment.
 * Integrated custom Google Fonts for better typography.
